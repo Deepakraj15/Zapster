@@ -1,0 +1,17 @@
+
+# packages and enviroment folders
+
+__pycache__/
+include/
+Lib/
+Lib/*/
+Scripts/
+
+# configure file
+
+pyvenv.cfg
+
+# Authentication file
+
+credentials.py
+twitter_credentials.json
