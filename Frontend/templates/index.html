@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapster</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <!-- <link rel="stylesheet" href="../static/css/app.css"> -->
+</head>
+
+<body>
+    <header>
+        <img src="{{url_for('static',filename = 'image/icons8-twitter-100.png')}}" alt="">
+        <!-- <img id="logo" src="../static/image/icons8-twitter-100.png" alt=""> -->
+        <p>Zapster</p>
+
+    </header>
+    <main>
+        <div class="container">
+            <form action="/result" method="post">
+                <label>Tweet Query <p class="blunt">(Relevant Keywords)</p> <input name='query' type="text" required></label>
+                <label>Number of Tweets to be processed:<input name="no_tweets" type="text" required></label>
+                <button>Analysis</button>
+            </form>
+            <div class="output">
+                    {% if data[0] > data[1] and data[0] > data[2] %}
+                        <img id ="out-img" src="{{url_for('static',filename = 'image/sad.png')}}" alt="">
+                        <h1>NEGATIVE: {{data[0]}}</h1>
+                    {% elif data[1] > data[2] and data[1] > data[0] %}
+                        <img id ="out-img"  src="{{url_for('static',filename = 'image/surprised.png')}}" alt="">
+                        <h1>NEUTRAL: {{data[1]}}</h1>
+                    {% else %}
+                        <img id ="out-img"  src="{{url_for('static',filename = 'image/happy.png')}}" alt="">                   
+                        <h1>POSITIVE: {{data[2]}}</h1>
+                    {% endif %}
+            </div>
+        </div>
+        <article>
+
+            <ul>PACKAGES USED
+                <li>numpy</li>
+                <li>pandas</li>
+                <li>pytorch</li>
+                <li>flask</li>
+                <li>transformers</li>
+                <li>tweepy</li>
+                <li>json</li>
+                <li>time</li>
+            </ul>
+        </article>
+    </main>
+    <aside>
+        Zapster is a python based web application that runs on flask environment.It performs <b> Sentiment
+            Analysis</b> of Twitter text <span>(Tweets)</span> on a given topic <span>(Query)</span>
+        This project basically uses pytorch based pre-built machine learning
+        Hugging Face models from <a href="https://huggingface.co/"><i>https://huggingface.co/</i></a>
+    </aside>
+    <footer>
+        <div class="credits">
+            <address>This project was done by Deepakraj K:</address>
+            <address>
+            <a href="linkedin.com/in/deepakraj-k-4906701ba">
+                <img id="linked-in" src="{{url_for('static',filename='image/icons8-linkedin-circled-96.png')}}" alt="">
+            </a>
+            <a href="https://github.com/Deepakraj15">
+                <img id="github" src="{{url_for('static',filename='image/icons8-github-96.png')}}" alt="">
+            </a>
+        </address>
+            <!-- <address>
+                <a href="linkedin.com/in/deepakraj-k-4906701ba">
+                    <img id="linked-in" src="../static/image/icons8-linkedin-circled-96.png" alt="">
+                </a>
+                <a href="https://github.com/Deepakraj15">
+                    <img id="github" src="../static/image/icons8-github-96.png" alt="">
+                </a>
+            </address> -->
+        </div>
+    </footer>
+</body>
+
+</html>

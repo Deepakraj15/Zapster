@@ -1,0 +1,173 @@
+:root {
+    --base: #4b4cfb;
+    --major: #dbe3f7;
+    --draft: #3cbbfb;
+}
+
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--major);
+}
+
+header {
+    width: 100%;
+    height: 20%;
+}
+
+header,
+main {
+    margin: 10px;
+}
+
+main {
+    width: 100%;
+    height: fit-content;
+}
+
+.container {
+    display: flex;
+    width: 100%
+}
+
+#logo {
+    max-width: 100px;
+
+}
+
+form {
+    width: 40%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.output{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#out-img{
+    max-width: 150px;
+}
+h1{
+    margin-top: 10px;
+}
+button {
+    width: 200px;
+    height: 35px;
+    background-color: transparent;
+    border: 3px solid var(--base);
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--base);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.5px;
+}
+
+button:hover {
+    background-color: var(--draft);
+    color: var(--major);
+    border-radius: 3px solid var(--draft);
+    border-radius: 10px;
+}
+
+article {
+    display: flex;
+}
+
+aside {
+    margin-left: 20px;
+
+}
+
+ul {
+    letter-spacing: 1px;
+    background-color: var(--draft);
+    width: max-content;
+    padding: 20px;
+    border-radius: 10px;
+    list-style: none;
+    margin: 0 20px 0 30px;
+}
+
+ul {
+    font-weight: 700;
+}
+
+li {
+    font-weight: 600;
+}
+span{
+    color: red;
+}
+p {
+    display: inline;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+}
+
+label {
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+input {
+    margin-bottom: 20px;
+    float: right;
+    width: 200px;
+    height: 24px;
+    text-indent: 8px;
+    border: 0.7px solid black;
+    border-radius: 10px;
+}
+
+footer {
+    color: azure;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: gray;
+
+}
+
+.credits {
+    display: flex;
+    align-items: center;
+    transform: translate(75%, 180%);
+}
+
+.blunt {
+    letter-spacing: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    color: gray;
+}
+
+address {
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#linked-in,
+#github {
+    max-width: 40px;
+}

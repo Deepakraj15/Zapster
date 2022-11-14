@@ -8,7 +8,7 @@ def preprocess():
     for tweet in df['text']:
         tweet_words = []
         for word in tweet.split(' '):
-            if ('@' in word or '#' in word or 'http' in word or 'https' in word and len(word) > 1):
+            if (('@' in word) or ('#' in word )or ('http' in word) or ('https' in word) and len(word) > 1):
                 word = ""
 
             elif (len(word) <= 1):
