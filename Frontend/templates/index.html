@@ -27,13 +27,13 @@
             <div class="output">
                     {% if data[0] > data[1] and data[0] > data[2] %}
                         <img id ="out-img" src="{{url_for('static',filename = 'image/sad.png')}}" alt="">
-                        <h1>NEGATIVE: {{data[0]}}</h1>
+                        <h1>NEGATIVE: {{data[0]}} %</h1>
                     {% elif data[1] > data[2] and data[1] > data[0] %}
                         <img id ="out-img"  src="{{url_for('static',filename = 'image/surprised.png')}}" alt="">
-                        <h1>NEUTRAL: {{data[1]}}</h1>
+                        <h1>NEUTRAL: {{data[1]}} %</h1>
                     {% else %}
                         <img id ="out-img"  src="{{url_for('static',filename = 'image/happy.png')}}" alt="">                   
-                        <h1>POSITIVE: {{data[2]}}</h1>
+                        <h1>POSITIVE: {{data[2]}} %</h1>
                     {% endif %}
             </div>
         </div>
